@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Gnum Comparator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1 id="result">Compare Gnums</h1>
+  
+  <div class="requirements-note">
+    <h3>⚠️ Input Requirements for Comparison:</h3>
+    <ul>
+      <li><strong>Base 10:</strong> All arrays & nested arrays must have base 10 for +2 entries</li>
+      <li><strong>Stability:</strong> Values must be stable after applying rule 2 and 3</li>
+      <li><strong>Growth Rate:</strong> Inner arrays can't have growth rate higher than parent</li>
+      <li><strong>Integers:</strong> For +3 entries, all elements should be integers for correct reduction</li>
+    </ul>
+  </div>
+  
+  <div class="gnum-container">
+    <div class="gnum-section">
+      <h3>Gnum 1 Properties:</h3>
+      <div class="property-group">
+        <label for="sign1">Sign:</label>
+        <div class="sign-options">
+          <label><input type="radio" name="sign1" value="1" checked> Positive (+1)</label>
+          <label><input type="radio" name="sign1" value="0"> Zero (0)</label>
+          <label><input type="radio" name="sign1" value="-1"> Negative (-1)</label>
+        </div>
+      </div>
+      
+      <div class="property-group">
+        <label for="array1">Array:</label>
+        <textarea id="array1" placeholder="Enter array values, e.g.: [10] or [10, 2] or [10, [3, 2]]">[10]</textarea>
+      </div>
+    </div>
+
+    <div class="gnum-section">
+      <h3>Gnum 2 Properties:</h3>
+      <div class="property-group">
+        <label for="sign2">Sign:</label>
+        <div class="sign-options">
+          <label><input type="radio" name="sign2" value="1" checked> Positive (+1)</label>
+          <label><input type="radio" name="sign2" value="0"> Zero (0)</label>
+          <label><input type="radio" name="sign2" value="-1"> Negative (-1)</label>
+        </div>
+      </div>
+      
+      <div class="property-group">
+        <label for="array2">Array:</label>
+        <textarea id="array2" placeholder="Enter array values, e.g.: [10] or [10, 2] or [10, [3, 2]]">[5]</textarea>
+      </div>
+    </div>
+  </div>
+
+  <button id="compareBtn" onclick="compareGnums()">Compare Gnums</button>
+  
+  <div class="result-section">
+    <h3>Result:</h3>
+    <div id="comparison-result">Click "Compare Gnums" to see the result</div>
+    <div id="runtime-display"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
